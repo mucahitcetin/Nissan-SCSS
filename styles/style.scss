@@ -63,6 +63,7 @@ header {
             padding: 0 20px;
             border-right: 1px solid gray;
         }
+
         @include mobile {
             font-size: 13px;
         }
@@ -89,28 +90,30 @@ header {
         position: relative;
         display: none;
         mix-blend-mode: darken;
-       @include mobile {
-        display: block;
+
+        @include mobile {
+            display: block;
+        }
     }
-    }
-    .fa-bars{
+
+    .fa-bars {
         color: #252a34;
     }
 
     .menu {
         display: none;
-     
+
         position: absolute;
         top: 100%;
         left: -25px;
         list-style: none;
         padding: 0;
-        margin: 10px 0 0 0 ;
+        margin: 10px 0 0 0;
         background-color: rgba(128, 128, 128, 0);
     }
 
     .menu li {
-        margin: 0 5px 0 0 ;
+        margin: 0 5px 0 0;
     }
 
     .menu li a {
@@ -118,7 +121,7 @@ header {
         padding: 10px;
         text-decoration: none;
         font-size: 12px;
-        
+
     }
 
     .menu li:hover {
@@ -136,6 +139,7 @@ header {
         flex-direction: column;
         align-items: center;
         padding: 30px 40px;
+        text-align: center;
     }
 
     @include laptop {
@@ -162,11 +166,8 @@ header {
 
         @include mobile {
             text-align: center;
+            font-size: 35px;
         }
-    }
-
-    span {
-        font-family: 'Times New Roman', Times, serif
     }
 
     p {
@@ -216,6 +217,12 @@ header {
         max-width: 500px;
         mix-blend-mode: darken;
         text-align: center;
+    }
+
+    p {
+        @include mobile {
+            text-align: center
+        }
     }
 }
 
@@ -341,13 +348,14 @@ footer {
     bottom: -24px;
 }
 
-.reserved{
+.reserved {
     background-color: black;
     color: white;
     font-size: 16px;
     padding: 8px;
     text-align: center;
-    span{
+
+    span {
         color: crimson;
     }
 }

@@ -164,6 +164,7 @@ header .menu li:hover {
     flex-direction: column;
     align-items: center;
     padding: 30px 40px;
+    text-align: center;
   }
 }
 @media (min-width: 800px) and (max-width: 1400px) {
@@ -192,10 +193,8 @@ header .menu li:hover {
 @media (max-width: 800px) {
   .slogan h1 {
     text-align: center;
+    font-size: 35px;
   }
-}
-.slogan span {
-  font-family: "Times New Roman", Times, serif;
 }
 .slogan img {
   width: 200px;
@@ -231,6 +230,11 @@ header .menu li:hover {
   max-width: 500px;
   mix-blend-mode: darken;
   text-align: center;
+}
+@media (max-width: 800px) {
+  .images p {
+    text-align: center;
+  }
 }
 
 /* İç Dizayn */
