@@ -1,0 +1,353 @@
+@import 'variables';
+@import 'modules';
+
+/* responsive */
+@mixin mobile {
+    @media (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width:800px) and (max-width:1400px) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    mix-blend-mode: darken;
+}
+
+body {
+    background-color: $bg-color ;
+    font-family: $main-font;
+    overflow-x: hidden;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 100px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
+
+    &:hover {
+        color: crimson;
+        transition: all .5s;
+    }
+
+
+    #nav-left {
+        a {
+            padding: 0 20px;
+            border-right: 1px solid gray;
+        }
+        @include mobile {
+            font-size: 13px;
+        }
+    }
+
+    &:last-child {
+        border-right: none;
+    }
+
+    #nav-right {
+        gap: 30px;
+        font-size: 15px;
+
+        @include mobile {
+            display: none;
+        }
+
+        a:last-child {
+            margin-right: 10px;
+        }
+    }
+
+    .menu-container {
+        position: relative;
+        display: none;
+        mix-blend-mode: darken;
+       @include mobile {
+        display: block;
+    }
+    }
+    .fa-bars{
+        color: #252a34;
+    }
+
+    .menu {
+        display: none;
+     
+        position: absolute;
+        top: 100%;
+        left: -25px;
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0 0 ;
+        background-color: rgba(128, 128, 128, 0);
+    }
+
+    .menu li {
+        margin: 0 5px 0 0 ;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 12px;
+        
+    }
+
+    .menu li:hover {
+        background-color: #14141448;
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    background: linear-gradient(rgb(215, 215, 215) 40%, $bg-color 40%);
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 40px;
+    }
+
+    @include laptop {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: 500px;
+
+    @include mobile {
+        gap: 20px;
+    }
+
+    h1 {
+        @extend %heading;
+        font-size: 40px;
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    span {
+        font-family: 'Times New Roman', Times, serif
+    }
+
+    p {
+        @extend %p;
+    }
+
+    img {
+
+        width: 200px;
+    }
+
+    h2 {
+        @extend %heading;
+    }
+
+    button {
+        @extend %button;
+        background-color: crimson;
+
+        &:hover {
+            background-color: rgba(160, 16, 46);
+            transition: all .4s;
+        }
+    }
+}
+
+.images {
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+
+    &-banner {
+        max-width: 900px;
+
+        @include laptop {
+            max-width: 500px;
+        }
+
+        @include mobile {
+            max-width: 500px;
+        }
+    }
+
+    &-track {
+        max-width: 500px;
+        mix-blend-mode: darken;
+        text-align: center;
+    }
+}
+
+/* İç Dizayn */
+
+#interior {
+    @extend %design;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5), black),
+        url('/images/interior.jpg');
+}
+
+button {
+    @extend %button;
+}
+
+#exterior {
+    @extend %design;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.3), black),
+        url('/images/exterior-4.jpg');
+
+    p {
+        font-size: 17px;
+
+        @include mobile {
+            font-size: 15px;
+        }
+    }
+
+    button {
+        @extend %button;
+    }
+}
+
+/* Arabalar */
+
+#cars-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+
+    .cars {
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    button {
+        @extend %button;
+        margin-top: 50px;
+        background-color: crimson;
+
+        &:hover {
+            background-color: rgba(160, 16, 46);
+            transition: all .4s;
+        }
+    }
+}
+
+
+/*  Footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: black;
+    padding: 50px;
+
+    @include mobile {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        mix-blend-mode: unset;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include mobile {
+            align-items: center;
+        }
+
+        h2 {
+            @extend %heading;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    position: relative;
+}
+
+.box div {
+    position: absolute;
+    right: 0;
+    bottom: -24px;
+}
+
+.reserved{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+    span{
+        color: crimson;
+    }
+}

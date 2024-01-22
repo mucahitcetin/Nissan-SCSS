@@ -1,0 +1,342 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+footer .footer-links h2, .slogan h2, .slogan h1, #exterior h1, #interior h1 {
+  font-family: "Inter";
+  color: #252a34;
+}
+
+.slogan p, #exterior p, #interior p {
+  color: #37393c;
+  font-size: 17px;
+}
+
+#cars-area button, button, #exterior button, #interior button, .slogan button {
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#exterior, #interior {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+#exterior h1, #interior h1 {
+  color: white;
+}
+#exterior p, #interior p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  max-width: 500px;
+  color: white;
+}
+#exterior button, #interior button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color 0.4s;
+  color: white;
+  padding: 15px 40px;
+}
+#exterior button:hover, #interior button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.4s;
+}
+
+/* responsive */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  mix-blend-mode: darken;
+}
+
+body {
+  background-color: #eaeaea;
+  font-family: "Poppins";
+  overflow-x: hidden;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 100px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+  color: #252a34;
+}
+header:hover {
+  color: crimson;
+  transition: all 0.5s;
+}
+header #nav-left a {
+  padding: 0 20px;
+  border-right: 1px solid gray;
+}
+@media (max-width: 800px) {
+  header #nav-left {
+    font-size: 13px;
+  }
+}
+header:last-child {
+  border-right: none;
+}
+header #nav-right {
+  gap: 30px;
+  font-size: 15px;
+}
+@media (max-width: 800px) {
+  header #nav-right {
+    display: none;
+  }
+}
+header #nav-right a:last-child {
+  margin-right: 10px;
+}
+header .menu-container {
+  position: relative;
+  display: none;
+  mix-blend-mode: darken;
+}
+@media (max-width: 800px) {
+  header .menu-container {
+    display: block;
+  }
+}
+header .fa-bars {
+  color: #252a34;
+}
+header .menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -25px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  background-color: rgba(128, 128, 128, 0);
+}
+header .menu li {
+  margin: 0 5px 0 0;
+}
+header .menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 12px;
+}
+header .menu li:hover {
+  background-color: rgba(20, 20, 20, 0.2823529412);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background: linear-gradient(rgb(215, 215, 215) 40%, #eaeaea 40%);
+}
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1400px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  max-width: 500px;
+}
+@media (max-width: 800px) {
+  .slogan {
+    gap: 20px;
+  }
+}
+.slogan h1 {
+  font-size: 40px;
+}
+@media (max-width: 800px) {
+  .slogan h1 {
+    text-align: center;
+  }
+}
+.slogan span {
+  font-family: "Times New Roman", Times, serif;
+}
+.slogan img {
+  width: 200px;
+}
+.slogan button {
+  background-color: crimson;
+}
+.slogan button:hover {
+  background-color: rgb(160, 16, 46);
+  transition: all 0.4s;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.images-banner {
+  max-width: 900px;
+}
+@media (min-width: 800px) and (max-width: 1400px) {
+  .images-banner {
+    max-width: 500px;
+  }
+}
+@media (max-width: 800px) {
+  .images-banner {
+    max-width: 500px;
+  }
+}
+.images-track {
+  max-width: 500px;
+  mix-blend-mode: darken;
+  text-align: center;
+}
+
+/* İç Dizayn */
+#interior {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black), url("/images/interior.jpg");
+}
+
+#exterior {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.3), black), url("/images/exterior-4.jpg");
+}
+#exterior p {
+  font-size: 17px;
+}
+@media (max-width: 800px) {
+  #exterior p {
+    font-size: 15px;
+  }
+}
+/* Arabalar */
+#cars-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+#cars-area .cars {
+  display: flex;
+}
+@media (max-width: 800px) {
+  #cars-area .cars {
+    flex-direction: column;
+  }
+}
+#cars-area .cars img {
+  width: 300px;
+}
+#cars-area .cars h3 {
+  text-align: center;
+}
+#cars-area button {
+  margin-top: 50px;
+  background-color: crimson;
+}
+#cars-area button:hover {
+  background-color: rgb(160, 16, 46);
+  transition: all 0.4s;
+}
+
+/*  Footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: black;
+  padding: 50px;
+}
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+footer img {
+  width: 80px;
+  height: 80px;
+  mix-blend-mode: unset;
+}
+footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 800px) {
+  footer .footer-links {
+    align-items: center;
+  }
+}
+footer .footer-links h2 {
+  color: white;
+}
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid;
+  position: relative;
+}
+
+.box div {
+  position: absolute;
+  right: 0;
+  bottom: -24px;
+}
+
+.reserved {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 8px;
+  text-align: center;
+}
+.reserved span {
+  color: crimson;
+}/*# sourceMappingURL=style.css.map */
